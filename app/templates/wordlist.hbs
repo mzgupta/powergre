@@ -1,0 +1,10 @@
+{{#each model as |set|}}
+<div class="col-md-2 m-h-150 card-layout m-10 clickable" {{action 'explore' set}}>
+    <div class='col top'>
+        <h3>Set</h3>
+    </div>
+    <div class='col bottom'>
+        <h3>{{set.id}}</h3>
+    </div>
+</div>
+{{/each}}

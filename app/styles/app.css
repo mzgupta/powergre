@@ -1,0 +1,65 @@
+.circle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+.set {
+    width: 100%;
+    height: 100px;
+    background: yellow;
+    padding: 4px;
+    border: 3px solid red;
+    cursor: pointer;
+}
+
+/*Nav Bar*/
+nav.sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background-color:#E5E5E5;
+    margin-top:60px; 
+    /* z-index for sidebar starts at 2000 (same as leftmenu), lightbox is 1000*/
+    z-index: 2000;
+}
+
+nav.sidebar .icon {
+  font-size: 24px;
+}
+
+nav.sidebar ul {
+      padding: 0px;
+      margin: 0px;
+      list-style-type: none;
+}
+
+nav.sidebar ul li {
+    padding: 5px 10px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+nav.sidebar ul li li.active {
+    background-color: #A5A5A5;
+}
+
+
+
+
+
+#study-tmpl {
+    width: 100%;
+    height: 800px;
+    margin-left: 50px;
+    padding: 20px;
+}
+
+
+
+
+
+
+
