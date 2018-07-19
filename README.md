@@ -43,9 +43,13 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
+### Deploying to Heroku
 
-Specify what it takes to deploy your app.
+```sh
+$ heroku create --buildpack https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/emberjs.tgz
+$ git push heroku master
+$ heroku open
+```
 
 ## Further Reading / Useful Links
 
