@@ -12,7 +12,7 @@ export default Controller.extend(NavigationMixin,{
         for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
         return o;
     },    
-    hotWords : computed('index',function() {
+    hotWords : computed('index','model',function() {
         var index = this.get('index'),
             increament = this.get('increament');
 
