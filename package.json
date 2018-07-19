@@ -4,7 +4,7 @@
   "private": true,
   "description": "Small description for powergre goes here",
   "license": "MIT",
-  "author": "",
+  "author": "Mayank",
   "directories": {
     "doc": "doc",
     "test": "tests"
