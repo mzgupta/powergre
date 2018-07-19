@@ -1,0 +1,72 @@
+{{#if reverse}}
+    <h1>{{question.meaning}}</h1>
+    <form role="form">
+        <h1 class="result-icon">
+            <i class="{{if isCorrect "c-green" "c-red"}} {{if isCorrect "glyphicon glyphicon-ok" "glyphicon glyphicon-remove"}} {{if showResult "show" "hide"}}"></i>
+
+        </h1>
+        <div class="radio">
+          <label> 
+            {{#radio-button value=options.[0] groupValue=selection changed="optionChanged"}}
+            {{options.0.name}} 
+            {{/radio-button}}
+            </label>
+          </div>
+        <div class="radio">
+          <label> 
+            {{#radio-button value=options.[1]  groupValue=selection changed="optionChanged"}}
+            {{options.1.name}} 
+            {{/radio-button}}
+            </label>
+          </div>
+        <div class="radio">
+          <label> 
+            {{#radio-button value=options.[2]  groupValue=selection changed="optionChanged"}}
+            {{options.2.name}} 
+            {{/radio-button}}
+            </label>
+          </div>
+        <div class="radio">
+          <label> 
+            {{#radio-button value=options.[3]  groupValue=selection changed="optionChanged"}}
+            {{options.3.name}} 
+            {{/radio-button}}
+            </label>
+          </div>
+    </form>
+{{else}}
+    <h1>{{question.name}}</h1>
+    <form role="form">
+        <h1 class="result-icon">
+           <i class="{{if isCorrect "c-green" "c-red"}} {{if isCorrect "glyphicon glyphicon-ok" "glyphicon glyphicon-remove"}} {{if showResult "show" "hide"}}"></i>
+        </h1>
+        <div class="radio">
+          <label> 
+            {{#radio-button value=options.[0] groupValue=selection changed="optionChanged"}}
+            {{options.0.meaning}} 
+            {{/radio-button}}
+            </label>
+          </div>
+        <div class="radio">
+          <label> 
+            {{#radio-button value=options.[1]  groupValue=selection changed="optionChanged"}}
+            {{options.1.meaning}} 
+            {{/radio-button}}
+            </label>
+          </div>
+        <div class="radio">
+          <label> 
+            {{#radio-button value=options.[2]  groupValue=selection changed="optionChanged"}}
+            {{options.2.meaning}} 
+            {{/radio-button}}
+            </label>
+          </div>
+        <div class="radio">
+          <label> 
+            {{#radio-button value=options.[3]  groupValue=selection changed="optionChanged"}}
+            {{options.3.meaning}} 
+            {{/radio-button}}
+            </label>
+          </div>
+    </form>
+{{/if}}

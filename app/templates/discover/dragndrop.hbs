@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="center-block position-relative w-1000 f-20">
+    {{#each hotWords as |hotWord|}}
+        <div class="col-md-6 mb-15">
+            {{mz-draggable hotWord=hotWord  startDragAction=(action "didDrop") dropAction=(action "didDrop")
+            dragEndAction=(action "reset")}}
+        </div>
+    {{/each}}
+  {{partial "layout/navigation"}}
+  </div>
+</div>

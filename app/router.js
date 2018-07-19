@@ -8,10 +8,12 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('wordlist');
-  this.route('discover');
-
-  this.route('posts', function() {
-    this.route('new');
+  this.route('discover', { path: '/wordlist/:id' }, function() {
+    this.route('study');
+    this.route('multiplechoice');
+    this.route('reversechoice');
+    this.route('hottarget');
+    this.route('dragndrop');
   });
 });
 

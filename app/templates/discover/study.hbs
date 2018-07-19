@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="center-block card-layout m-h-500 w-600 position-relative">
+        <div class='col top text-align-center'>
+            <h1>{{dictionary-link  word.name}}</h1>
+        </div>
+        <div class='col top f-25'>
+            {{word.meaning}}
+        </div>
+        <div class='col bottom text-info f-25'>
+            {{#each word.synonyms as |synonym|}}
+                {{dictionary-link  synonym}},
+            {{/each}}
+        </div>
+        {{partial "layout/navigation"}}
+    </div>
+</div>
