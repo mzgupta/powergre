@@ -4,6 +4,7 @@ import { A } from '@ember/array';
 
 export default Route.extend({
 	setupController : function (controller,model) {
+        controller.set("selectedWord", null);
         controller.set('index',0);
         controller.set('model',this.prepareHotWords(model));
     },

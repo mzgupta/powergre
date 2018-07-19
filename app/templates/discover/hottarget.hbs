@@ -1,7 +1,7 @@
 <div class="row">
   <div class="center-block position-relative w-1000 f-20">
     {{#each hotWords itemController="discover/word" as |hotWord|}}
-        {{mz-target hotWord=hotWord}}
+        {{mz-target hotWord=hotWord selectTarget=(action "didSelectTarget")}}
     {{/each}}
   {{partial "layout/navigation"}}
   </div>

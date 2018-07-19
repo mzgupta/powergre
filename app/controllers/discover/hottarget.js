@@ -17,6 +17,27 @@ export default Controller.extend(NavigationMixin,{
             increament = this.get('increament');
 
         return this.shuffle(this.get('model').slice(index,index+increament));
-    })
+    }),
+    actions: {
+        didSelectTarget : function(data) {
+            var selectedWord = this.get("selectedWord");
+            if(selectedWord) {
+                if(selectedWord == data) {
+                    selectedWord.set("highlight", false);
+                    this.set("selectedWord", null);
+                    return;
+                }
+                if(selectedWord.hotWord.word.id === data.hotWord.word.id) {
+                    selectedWord.set("hide", true);
+                    data.set("hide", true);
+                    this.set("selectedWord", null);
+                } 
+            }
+            else {
+                this.set("selectedWord", data);
+                data.set("highlight", true);
+            }
+        }
+    }
 
 });
